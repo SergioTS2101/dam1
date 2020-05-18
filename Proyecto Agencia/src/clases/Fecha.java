@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author: Sergio Tomeo Samuel
  * @since: 18/05/2020
  */
-public class fecha {
+public class Fecha {
 
 	// Atributos
 
@@ -26,9 +26,15 @@ public class fecha {
 	/**
 	 * Array con las citas
 	 */
-	private citas[] citas;
+	private Citas[] citas;
 
 	// Constructores
+	/**
+	 * Este constructor vacío, nos permite instanciar la clase
+	 */
+	public Fecha() {
+
+	}
 
 	/**
 	 * Constructor con 2 parámetros
@@ -36,7 +42,7 @@ public class fecha {
 	 * @param fecha fecha completa de la cita solicitada.
 	 * @param citas array con las citas que se han solicitado.
 	 */
-	public fecha(Date fecha, citas[] citas) {
+	public Fecha(Date fecha, Citas[] citas) {
 		this.fecha = fecha;
 		this.citas = null;
 	}
@@ -55,8 +61,8 @@ public class fecha {
 	 * nos muestra las citas que hay en cada fecha.
 	 */
 	public void verCitas() {
-		fecha f = null;
-		for (citas citas : f.citas) {
+		Fecha f = null;
+		for (Citas citas : f.citas) {
 			System.out.println(f.citas.toString());
 		}
 	}
@@ -67,8 +73,8 @@ public class fecha {
 	 * indica que la fecha no es válida.
 	 */
 	public void cambiarFecha() {
-		fecha fecha = new fecha(null, null);
-		System.out.println("Introduzca la nueva fecha en la que desee tener la cita");
+		Fecha fecha = new Fecha(null, null);
+		System.out.format("s", "Introduzca la nueva fecha en la que desee tener la cita");
 		Scanner sc = new Scanner(System.in);
 		String nuevaFecha = sc.nextLine();
 		SimpleDateFormat df = new SimpleDateFormat("dd/mm/YYYY");
@@ -78,13 +84,13 @@ public class fecha {
 			testDate = df.parse(date);
 			System.out.println(testDate);
 		} catch (Exception e) {
-			System.out.println("Introduzca un formato de fecha válido");
+			System.out.format("s", "Introduzca un formato de fecha válido");
 		}
 
 		if (!df.format(testDate).equals(date)) {
 			System.out.println(testDate);
 		} else {
-			System.out.println("Fecha nueva introducida.");
+			System.out.format("s", "Fecha nueva introducida.");
 		}
 		fecha.setFecha(nuevaFecha);
 	}
@@ -97,11 +103,11 @@ public class fecha {
 		this.fecha = fecha;
 	}
 
-	public citas[] getCitas() {
+	public Citas[] getCitas() {
 		return citas;
 	}
 
-	public void setCitas(citas[] citas) {
+	public void setCitas(Citas[] citas) {
 		this.citas = citas;
 	}
 

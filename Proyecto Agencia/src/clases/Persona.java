@@ -2,52 +2,53 @@ package clases;
 
 /**
  * 
- * Clase persona, nos sirve de padre de las clases empleado y noEmpleado dotandoles de una serie de atributos y metodos comunes.
+ * Clase persona, nos sirve de padre de las clases empleado y noEmpleado
+ * dotandoles de una serie de atributos y metodos comunes.
  *
  */
 
-public class persona {
-	
+public class Persona {
+
 	/**
 	 * Nombre de la persona
 	 */
 
 	private String nombre;
-	
-	/** 
+
+	/**
 	 * Primer apellido de la persona
 	 */
 
 	private String primerApellido;
-	
+
 	/**
 	 * Segundo apellido de la persona
 	 */
 
 	private String segundoApellido;
-	
+
 	/**
 	 * DNI de la persona
 	 */
 
 	private String dni;
-	
+
 	/**
 	 * Array de citas que ha tenido la persona
 	 */
 
-	private citas[] citas;
-	
+	private Citas[] citas;
+
 	/**
 	 * 
-	 * @param nombre nombre de la persona
-	 * @param primerApellido primer apellido de la persona 
+	 * @param nombre          nombre de la persona
+	 * @param primerApellido  primer apellido de la persona
 	 * @param segundoApellido segundo apellido de la persona
-	 * @param dni DNI de la persona
-	 * @param cita almacena las citas que ha tenido cada persona.
+	 * @param dni             DNI de la persona
+	 * @param cita            almacena las citas que ha tenido cada persona.
 	 */
 
-	public persona(String nombre, String primerApellido, String segundoApellido, String dni, citas[] cita) {
+	public Persona(String nombre, String primerApellido, String segundoApellido, String dni, Citas[] cita) {
 		super();
 		this.nombre = nombre;
 		this.primerApellido = primerApellido;
@@ -55,15 +56,15 @@ public class persona {
 		this.dni = dni;
 		this.citas = null;
 	}
-	
+
 	/**
 	 * Nos permite recorrer el array de citas que almacena cada persona, y nos
 	 * devuelve la informacion de las citas que ha tenido dicha persona.
 	 */
-	
+
 	public void verCitas() {
-		persona p = null;
-		for (citas citas : p.citas) {
+		Persona p = null;
+		for (Citas citas : p.citas) {
 			System.out.println(p.citas.toString());
 		}
 	}
@@ -100,13 +101,12 @@ public class persona {
 		this.dni = dni;
 	}
 
-	public citas[] getCitas() {
+	public Citas[] getCitas() {
 		return citas;
 	}
 
-	public void setCitas(citas[] citas) {
+	public void setCitas(Citas[] citas) {
 		this.citas = citas;
 	}
 
-	
 }

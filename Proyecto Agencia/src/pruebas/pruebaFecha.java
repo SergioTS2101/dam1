@@ -2,7 +2,7 @@ package pruebas;
 
 import java.util.Date;
 
-import clases.fecha;
+import clases.Fecha;
 
 public class pruebaFecha {
 

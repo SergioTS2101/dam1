@@ -6,7 +6,7 @@ package clases;
  *
  */
 
-public class noEmpleado extends persona {
+public class NoEmpleado extends Persona {
 	
 	/**
 	 * Empresa a la que pertenece
@@ -29,8 +29,8 @@ public class noEmpleado extends persona {
 	 * El resto de parametros son propios de persona.
 	 */
 
-	public noEmpleado(String empresa, String oficio, String nombre, String primerApellido, String segundoApellido,
-			String dni, citas[] cita) {
+	public NoEmpleado(String empresa, String oficio, String nombre, String primerApellido, String segundoApellido,
+			String dni, Citas[] cita) {
 		super(nombre, primerApellido, segundoApellido, dni, cita);
 		this.empresa = empresa;
 		this.oficio = oficio;
@@ -43,7 +43,7 @@ public class noEmpleado extends persona {
 	 */
 
 	public void cambiarOficio(String nuevooficio) {
-		noEmpleado e = null;
+		NoEmpleado e = null;
 		e.oficio=nuevooficio;
 	}
 
