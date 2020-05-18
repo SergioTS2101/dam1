@@ -14,10 +14,9 @@ public class citas {
 
 	private fecha fecha;
 
-	private personas persona;
+	private persona persona;
 
-	public citas(String motivo, Date horaComienzo, Date horaFin, String codigo, clases.fecha fecha, personas persona,
-			) {
+	public citas(String motivo, Date horaComienzo, Date horaFin, String codigo, clases.fecha fecha, persona persona) {
 		this.motivo = motivo;
 		this.horaComienzo = horaComienzo;
 		this.horaFin = horaFin;
@@ -93,11 +92,11 @@ public class citas {
 		this.fecha = fecha;
 	}
 
-	public personas getPersona() {
+	public persona getPersona() {
 		return persona;
 	}
 
-	public void setPersona(personas persona) {
+	public void setPersona(persona persona) {
 		this.persona = persona;
 	}
 
