@@ -102,7 +102,7 @@ public class Fecha {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-
+	
 	public Citas[] getCitas() {
 		return citas;
 	}
